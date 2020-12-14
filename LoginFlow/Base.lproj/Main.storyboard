@@ -59,17 +59,52 @@
             </objects>
             <point key="canvasLocation" x="872" y="88"/>
         </scene>
-        <!--Info View Controller-->
+        <!--로그인 정보-->
         <scene sceneID="bgD-Cr-fy5">
             <objects>
-                <viewController id="8fL-nM-VY4" customClass="InfoViewController" customModule="LoginFlow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="로그인 정보" id="8fL-nM-VY4" customClass="InfoViewController" customModule="LoginFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="stZ-vz-6an">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Otf-jJ-pC6">
+                                <rect key="frame" x="16" y="419" width="382" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdH-Lq-Gc2">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="8fR-ti-ctk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqa-Km-PJp">
+                                        <rect key="frame" x="0.0" y="37" width="382" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="cvU-qk-7l7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lHk-oU-VV4"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Otf-jJ-pC6" firstAttribute="leading" secondItem="lHk-oU-VV4" secondAttribute="leading" constant="16" id="3hV-vM-Kqj"/>
+                            <constraint firstItem="lHk-oU-VV4" firstAttribute="trailing" secondItem="Otf-jJ-pC6" secondAttribute="trailing" constant="16" id="4sp-MJ-2dp"/>
+                            <constraint firstItem="Otf-jJ-pC6" firstAttribute="centerY" secondItem="stZ-vz-6an" secondAttribute="centerY" id="cUX-fk-u2l"/>
+                            <constraint firstItem="Otf-jJ-pC6" firstAttribute="centerX" secondItem="stZ-vz-6an" secondAttribute="centerX" id="guM-cz-Tyj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WPg-Fg-hgw"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="BdH-Lq-Gc2" id="ymz-IM-vMF"/>
+                        <outlet property="passwordLabel" destination="Tqa-Km-PJp" id="GwC-fe-Kuc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j58-xy-3fp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,9 +134,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -67,7 +67,7 @@ class LoginViewController: UIViewController {
         guard id == "ShowInfo" else { return }
         
         guard let infoViewController = segue.destination as? InfoViewController else { return }
+        
+        infoViewController.loginInfo = LoginInfo(email: email, password: password)
     }
-    
-
 }
